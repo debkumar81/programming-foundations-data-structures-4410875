@@ -1,5 +1,11 @@
 def has_unique_characters(data):
-    return False
+    char=set()
+    for str in data:
+        if str in char:
+            return False
+        else:
+            char.add(str)
+    return True
 
 print(has_unique_characters('sample'))
 print(has_unique_characters('hello world'))
